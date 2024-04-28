@@ -31,3 +31,19 @@ ADD Category VARCHAR(20);
 -- Add column OrderDate to the ORDERS table with default value SYSDATE
 ALTER TABLE ORDERS
 ADD OrderDate DATE DEFAULT SYSDATE;
+
+
+-- Insert data into CUSTOMER table
+INSERT INTO CUSTOMER (CustCode, CustName, CustAddress, CustTel)
+VALUES
+    ('C001', 'John Doe', '123 Main Street', '555-1234'),
+    ('C002', 'Jane Smith', '456 Elm Street', '555-5678'),
+    ('C003', 'Alice Johnson', '789 Oak Street', '555-9101');
+
+-- Insert data into ORDERS table
+INSERT INTO ORDERS (OrderCode, OrderDate, CustCode)
+VALUES
+    ('O001', '2024-03-03', 'C001'),
+    ('O002', '2024-03-03', 'C002'),
+    ('O003', '2024-03-03', 'C003');
+
